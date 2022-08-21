@@ -45,7 +45,13 @@ const calculate = (value: string): string => {
     if (value.includes('%')) {
         return (parseFloat(value.split('%')[0]) / 100 * parseFloat(value.split('%')[1])).toString();
     }
-    const result = eval(value);
+    let result = 0;
+    try {
+        result = eval(value);
+    } catch (error) {
+        console.error('Error evaluating expression: ', error);
+        result = 0;
+    }
     return result.toString();
 }
 

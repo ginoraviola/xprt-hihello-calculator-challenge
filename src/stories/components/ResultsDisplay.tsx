@@ -4,13 +4,13 @@ import getResultsDisplayStyle from "./ResultsDisplay.style";
 
 const ResultsDisplay = ({value, operationText}) => {
 
-   const styles = getResultsDisplayStyle(value.length);
+    const styles = getResultsDisplayStyle(value.length);
 
     return (
-        <View style={styles.container}>
-          <Text style={styles.operationText}>{operationText !== '0' ? operationText : ''}</Text>
-          <Text style={styles.displayText} ellipsizeMode="head" numberOfLines={1}>{value}</Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+                <Text style={styles.operationText}>{operationText !== '0' ? operationText : ''}</Text>
+                <Text style={styles.displayText} ellipsizeMode="head" numberOfLines={1}>{value}</Text>
+        </SafeAreaView>
     );
 };
 
