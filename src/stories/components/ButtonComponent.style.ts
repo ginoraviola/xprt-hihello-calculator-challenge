@@ -1,23 +1,21 @@
 import {StyleSheet} from 'react-native';
-import {ButtonVariants} from "../../utils/ButtonVariants";
+import {ButtonVariants} from '../../utils/ButtonVariants';
 
-const getButtonStyles = (isFlex: boolean, variant: ButtonVariants, bgColor: string) =>  StyleSheet.create({
+const getButtonStyles = (variant: ButtonVariants, bgColor: string) => StyleSheet.create({
     container: {
-            flex: isFlex ? 1 : 0,
-            alignItems: "center",
-            padding: '6%',
-            margin: '2%',
+            aspectRatio: 1,
+            flexBasis: '20%',
+            alignItems: 'center',
+            justifyContent: 'space-evenly',
+            margin: '1.5%',
             backgroundColor: variant === ButtonVariants.tertiary ? '#e89536' : bgColor,
-            width: 72,
-            height: 72,
-            borderRadius: 72/2,
-            justifyContent: "center",
+            borderRadius: 50,
     },
     buttonText: {
-        fontSize: 22,
-        fontWeight: "bold",
-        color: variant === ButtonVariants.secondary ? "black" : "white",
-    }
-});
+            fontSize: 24,
+            fontWeight: 'bold',
+            color: variant === ButtonVariants.secondary ? 'black' : 'white',
+    },
+  });
 
 export default getButtonStyles;

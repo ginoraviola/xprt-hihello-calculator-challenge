@@ -5,7 +5,7 @@ const getResultsDisplayStyle = (length) => StyleSheet.create({
         position: 'absolute',
         paddingVertical: '5%',
         height: '40%',
-        width: '100%',
+        width: '90%',
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
     },

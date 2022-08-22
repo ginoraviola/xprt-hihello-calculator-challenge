@@ -16,11 +16,9 @@ const CalculatorScreen = () => {
     }
 
     return (
-        <SafeAreaView>
-            <View style={styles.container}>
-                <ResultsDisplay value={value} operationText={operationText}/>
-                <CalculatorKeyboard onKeyPress={(key) => onKeyboardKeyPress(key)}/>
-            </View>
+       <SafeAreaView style={styles.container}>
+          <ResultsDisplay value={value} operationText={operationText}/>
+          <CalculatorKeyboard onKeyPress={(key) => onKeyboardKeyPress(key)}/>
         </SafeAreaView>
     );
 }

@@ -8,7 +8,7 @@ interface ICalculatorKeyboardProps {
     onKeyPress: (value: string) => void;
 }
 
-const CalculatorKeyboard = ({onKeyPress}: ICalculatorKeyboardProps ) => {
+const CalculatorKeyboard = ({onKeyPress}: ICalculatorKeyboardProps) => {
     return (
         <View style={styles.container}>
             {keyboardValues.map((key, index) => {
@@ -17,7 +17,6 @@ const CalculatorKeyboard = ({onKeyPress}: ICalculatorKeyboardProps ) => {
                         key={index}
                         text={key.value}
                         variant={key.variant}
-                        isFlex={key.value === '0'}
                         onPress={() => onKeyPress(key.value)}
                     />
                 )}

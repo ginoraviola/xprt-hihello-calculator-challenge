@@ -11,10 +11,10 @@ interface IButtonProps {
     onPress: () => void;
 }
 
-const ButtonComponent = ({isFlex = false, text, variant = ButtonVariants.primary, onPress }: IButtonProps) => {
+const ButtonComponent = ({text, variant = ButtonVariants.primary, onPress }: IButtonProps) => {
     const bgColor = variant === ButtonVariants.primary ? Colors.dark : '#a7a5a5';
 
-    const styles = getButtonStyles(isFlex, variant, bgColor);
+    const styles = getButtonStyles(variant, bgColor);
 
     return (
         <TouchableOpacity style={styles.container} onPress={onPress}>

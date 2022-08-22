@@ -43,7 +43,9 @@ const handleKeyPressed = (key: string, value: string, operationText: string): { 
 
 const calculate = (value: string): string => {
     if (value.includes('%')) {
-        return (parseFloat(value.split('%')[0]) / 100 * parseFloat(value.split('%')[1])).toString();
+        const [first, second] = value.split('%');
+        let decimal = parseFloat(first) / 100;
+        return second ? (decimal * parseFloat(second)).toString() : decimal.toString();
     }
     let result = 0;
     try {
